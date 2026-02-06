@@ -47229,7 +47229,7 @@ self.onmessage = function (e) {
     };
     const fetchRange = async (url, start, end) => {
       const response = await fetch(`${url}`, {
-        headers: { Range: `bytes=${start}-${end}` }
+        headers: {}
       });
       const arrayBuffer = await response.arrayBuffer();
       return new Uint8Array(arrayBuffer);
